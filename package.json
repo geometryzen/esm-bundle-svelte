@@ -1,6 +1,6 @@
 {
     "name": "@geometryzen/svelte",
-    "version": "3.59.1",
+    "version": "4.0.0",
     "description": "svelte as an EcmaScript module and system module bundle",
     "type": "module",
     "exports": {
@@ -62,7 +62,7 @@
     },
     "homepage": "https://github.com/geometryzen/esm-bundle-svelte#readme",
     "dependencies": {
-        "svelte": "3.59.1"
+        "svelte": "4.0.0"
     },
     "devDependencies": {
         "@rollup/plugin-commonjs": "25.0.2",
