@@ -38,6 +38,7 @@ function createConfig(format: 'module' | 'system', target: 'es2022', minify: boo
             // The value is the path to the source code.
             "index": "./src/svelte.js",
             "animate/index": "./src/svelte-animate.js",
+            "compiler/index": "./src/svelte-compiler.js",
             "easing/index": "./src/svelte-easing.js",
             "internal/index": "./src/svelte-internal.js",
             "motion/index": "./src/svelte-motion.js",
