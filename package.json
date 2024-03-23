@@ -1,6 +1,6 @@
 {
     "name": "@geometryzen/svelte",
-    "version": "4.0.1",
+    "version": "5.0.0-next.82",
     "description": "svelte as an EcmaScript module and system module bundle",
     "type": "module",
     "exports": {
@@ -24,9 +24,29 @@
             "system": "./system/es2022/internal/index.min.js",
             "default": "./esm/es2022/internal/index.min.js"
         },
+        "./internal/disclose-version": {
+            "system": "./system/es2022/internal/disclose-version/index.min.js",
+            "default": "./esm/es2022/internal/disclose-version/index.min.js"
+        },
+        "./internal/server": {
+            "system": "./system/es2022/internal/server/index.min.js",
+            "default": "./esm/es2022/internal/server/index.min.js"
+        },
+        "./legacy": {
+            "system": "./system/es2022/legacy/index.min.js",
+            "default": "./esm/es2022/legacy/index.min.js"
+        },
         "./motion": {
             "system": "./system/es2022/motion/index.min.js",
             "default": "./esm/es2022/motion/index.min.js"
+        },
+        "./reactivity": {
+            "system": "./system/es2022/reactivity/index.min.js",
+            "default": "./esm/es2022/reactivity/index.min.js"
+        },
+        "./server": {
+            "system": "./system/es2022/server/index.min.js",
+            "default": "./esm/es2022/server/index.min.js"
         },
         "./store": {
             "system": "./system/es2022/store/index.min.js",
@@ -52,8 +72,7 @@
         "build": "npm run clean && rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
         "clean": "rm -rf dist && rm -rf esm && rm -rf system",
         "lint": "eslint . --ext .ts",
-        "prepublishOnly": "npm run build",
-        "release": "release-it"
+        "prepublishOnly": "npm run build"
     },
     "repository": {
         "type": "git",
@@ -66,21 +85,21 @@
     },
     "homepage": "https://github.com/geometryzen/esm-bundle-svelte#readme",
     "dependencies": {
-        "svelte": "4.0.0"
+        "svelte": "5.0.0-next.82"
     },
     "devDependencies": {
-        "@rollup/plugin-commonjs": "25.0.2",
-        "@rollup/plugin-json": "^6.0.0",
-        "@rollup/plugin-node-resolve": "^15.1.0",
-        "@rollup/plugin-typescript": "^11.1.2",
-        "@types/rollup-plugin-peer-deps-external": "2.2.1",
-        "@typescript-eslint/eslint-plugin": "^5.60.1",
-        "@typescript-eslint/parser": "^5.60.1",
-        "eslint": "^8.43.0",
-        "release-it": "^15.11.0",
+        "@rollup/plugin-commonjs": "25.0.7",
+        "@rollup/plugin-json": "^6.1.0",
+        "@rollup/plugin-node-resolve": "^15.2.3",
+        "@rollup/plugin-typescript": "^11.1.6",
+        "@types/rollup-plugin-peer-deps-external": "2.2.5",
+        "@typescript-eslint/eslint-plugin": "^7.3.1",
+        "@typescript-eslint/parser": "^7.3.1",
+        "eslint": "^8.57.0",
         "rollup-plugin-peer-deps-external": "^2.2.4",
         "rollup-plugin-terser": "^7.0.2",
-        "ts-node": "^10.9.1",
-        "typescript": "^5.1.5"
+        "ts-node": "^10.9.2",
+        "tslib": "^2.6.2",
+        "typescript": "^5.4.3"
     }
 }

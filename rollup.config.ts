@@ -5,9 +5,7 @@ import { terser } from 'rollup-plugin-terser';
 import packageJson from './package.json' /*assert { type: 'json' }*/;
 
 const dependencyPkgName = "svelte";
-const dependencyVersion = /[0-9.]+$/.exec(
-    packageJson.dependencies[dependencyPkgName]
-)[0];
+const dependencyVersion = packageJson.dependencies[dependencyPkgName];
 
 /**
  * @param format Either 'module' or 'system'.
@@ -27,7 +25,7 @@ function createConfig(format: 'module' | 'system', target: 'es2022', minify: boo
     }
     const banner = `/**
  * ${packageJson.name}@${packageJson.version} is a "${format}" format for ${dependencyPkgName}@${dependencyVersion}
- * © 2023 ${packageJson.author}
+ * © 2023-2024 ${packageJson.author}
  * Released under the ${packageJson.license} License.
  */
 `.trim();
@@ -41,7 +39,12 @@ function createConfig(format: 'module' | 'system', target: 'es2022', minify: boo
             "compiler/index": "./src/svelte-compiler.js",
             "easing/index": "./src/svelte-easing.js",
             "internal/index": "./src/svelte-internal.js",
+            "internal/disclose-version/index": "./src/svelte-internal-disclose-version.js",
+            "internal/server/index": "./src/svelte-internal-server.js",
+            "legacy/index": "./src/svelte-legacy.js",
             "motion/index": "./src/svelte-motion.js",
+            "reactivity/index": "./src/svelte-reactivity.js",
+            "server/index": "./src/svelte-server.js",
             "store/index": "./src/svelte-store.js",
             "transition/index": "./src/svelte-transition.js"
         },
