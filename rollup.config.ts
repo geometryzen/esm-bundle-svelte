@@ -16,6 +16,8 @@ function createConfig(format: 'module' | 'system', target: 'es2022', minify: boo
     const configDir = (format === "module" ? "esm" : format) + "/" + target;
     const plugins = [
         resolve({
+            // We want the src/main/main-client.js file which is under the "browser" export condition.
+            browser: true,
             exportConditions: [target],
         }),
         commonjs()
