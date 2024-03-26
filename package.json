@@ -1,6 +1,6 @@
 {
     "name": "@geometryzen/svelte",
-    "version": "5.0.0-next.82",
+    "version": "5.0.0-next.84",
     "description": "svelte as an EcmaScript module and system module bundle",
     "type": "module",
     "exports": {
