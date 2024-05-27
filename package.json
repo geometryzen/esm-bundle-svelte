@@ -1,7 +1,7 @@
 {
     "name": "@geometryzen/svelte",
-    "version": "5.0.0-next.85",
-    "description": "svelte as an EcmaScript module and system module bundle",
+    "version": "5.0.0-next.142",
+    "description": "Svelte as an EcmaScript module and system module bundle",
     "type": "module",
     "exports": {
         ".": {
@@ -23,6 +23,10 @@
         "./internal": {
             "system": "./system/es2022/internal/index.min.js",
             "default": "./esm/es2022/internal/index.min.js"
+        },
+        "./internal/client": {
+            "system": "./system/es2022/internal/client/index.min.js",
+            "default": "./esm/es2022/internal/client/index.min.js"
         },
         "./internal/disclose-version": {
             "system": "./system/es2022/internal/disclose-version/index.min.js",
@@ -85,21 +89,21 @@
     },
     "homepage": "https://github.com/geometryzen/esm-bundle-svelte#readme",
     "dependencies": {
-        "svelte": "5.0.0-next.85"
+        "svelte": "5.0.0-next.142"
     },
     "devDependencies": {
-        "@rollup/plugin-commonjs": "25.0.7",
+        "@rollup/plugin-commonjs": "25.0.8",
         "@rollup/plugin-json": "^6.1.0",
         "@rollup/plugin-node-resolve": "^15.2.3",
         "@rollup/plugin-typescript": "^11.1.6",
         "@types/rollup-plugin-peer-deps-external": "2.2.5",
-        "@typescript-eslint/eslint-plugin": "^7.4.0",
-        "@typescript-eslint/parser": "^7.4.0",
+        "@typescript-eslint/eslint-plugin": "^7.10.0",
+        "@typescript-eslint/parser": "^7.10.0",
         "eslint": "^8.57.0",
         "rollup-plugin-peer-deps-external": "^2.2.4",
         "rollup-plugin-terser": "^7.0.2",
         "ts-node": "^10.9.2",
         "tslib": "^2.6.2",
-        "typescript": "^5.4.3"
+        "typescript": "^5.4.5"
     }
 }

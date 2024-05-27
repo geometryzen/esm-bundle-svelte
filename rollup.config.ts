@@ -41,6 +41,7 @@ function createConfig(format: 'module' | 'system', target: 'es2022', minify: boo
             "compiler/index": "./src/svelte-compiler.js",
             "easing/index": "./src/svelte-easing.js",
             "internal/index": "./src/svelte-internal.js",
+            "internal/client/index": "./src/svelte-internal-client.js",
             "internal/disclose-version/index": "./src/svelte-internal-disclose-version.js",
             "internal/server/index": "./src/svelte-internal-server.js",
             "legacy/index": "./src/svelte-legacy.js",
